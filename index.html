@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel - Agencee</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="login-container" id="login-container">
+    <h2>Login Admin</h2>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+  </div>
+
+  <div class="admin-panel hidden" id="admin-panel">
+    <h1>Admin Panel - Agencee</h1>
+    <button onclick="logout()">Logout</button>
+    <hr>
+
+    <h2>Collaboratori</h2>
+    <input type="text" id="collab-name" placeholder="Nome Collaboratore">
+    <select id="calendar-type">
+      <option value="ical">iCal</option>
+      <option value="google">Google Calendar</option>
+    </select>
+    <input type="text" id="calendar-url" placeholder="URL Calendario">
+    <button onclick="addCollaborator()">Aggiungi Collaboratore</button>
+
+    <ul id="collaborators-list"></ul>
+
+    <hr>
+    <h2>Tipologie di Evento</h2>
+    <input type="text" id="event-name" placeholder="Nome Evento">
+    <select id="event-type">
+      <option value="call">Call</option>
+      <option value="onsite">Appuntamento in sede</option>
+    </select>
+    <input type="text" id="event-location" placeholder="Link Meet o Indirizzo">
+    <button onclick="addEventType()">Aggiungi Evento</button>
+
+    <ul id="events-list"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
